@@ -1,8 +1,17 @@
 import './App.css';
+import { useState } from 'react'
 
 function App() {
+  const [color, setColor] = useState('')
   return (
-    <h1>Hello World</h1>
+    <div className={`react-root ${color}`}>
+      <div className='centered'>
+        <h1>Color Picker</h1>
+        <button className='red' onClick={() => setColor('red')}>red</button>
+        <button className='blue' onClick={() => setColor('blue')}>blue</button>
+        <button className='yellow' onClick={() => setColor('yellow')}>yellow</button>
+      </div>
+    </div>
   );
 }
 
